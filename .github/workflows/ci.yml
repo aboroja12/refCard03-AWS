@@ -13,6 +13,6 @@ jobs:
       - name: Build the Docker image
         run: docker build -t andrej1210/refcard03-aws  .
       - name: Log in to Docker Hub
-        run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        run: docker login -u andrej1210 -p  ${{ secrets.DOCKER_PASSWORD }}
       - name: Push the Docker image
         run: docker push andrej1210/refcard03-aws
